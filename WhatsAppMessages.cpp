@@ -31,6 +31,9 @@ vector<Message> generateChatHistory(int n)
     }
     return history;
 }
+void compactHistory(vector<Message> &chat)
+{
+}
 
 int main()
 {
