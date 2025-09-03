@@ -42,6 +42,10 @@ void compactHistory(vector<Message> &chat)
             j++;
         }
     }
+
+    while (j < chat.size())
+    {
+    }
 }
 
 int main()
