@@ -65,4 +65,15 @@ int main()
     }
 
     cout << "Total mensajes generados: " << chat.size() << endl;
+
+    cout << "\nDespues de Compactar:\n";
+    for (int i = 0; i < 10; i++)
+    {
+        cout << chat[i].id << " [" << chat[i].sender << "]: "
+             << chat[i].text
+             << (chat[i].deleted ? " (deleted)" : "")
+             << endl;
+    }
+
+    cout << "Total mensajes generados: " << chat.size() << endl;
 }
