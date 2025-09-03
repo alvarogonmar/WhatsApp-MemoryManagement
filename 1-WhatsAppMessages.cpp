@@ -53,10 +53,10 @@ void compactHistory(vector<Message> &chat)
 
 int main()
 {
-    vector<Message> chat = generateChatHistory(5000);
+    vector<Message> chat = generateChatHistory(50);
 
     // Mostrar solo los primeros 10
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 50; i++)
     {
         cout << chat[i].id << " [" << chat[i].sender << "]: "
              << chat[i].text
@@ -64,10 +64,11 @@ int main()
              << endl;
     }
 
+    compactHistory(chat);
     cout << "Total mensajes generados: " << chat.size() << endl;
 
     cout << "\nDespues de Compactar:\n";
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < chat.size(); i++)
     {
         cout << chat[i].id << " [" << chat[i].sender << "]: "
              << chat[i].text
