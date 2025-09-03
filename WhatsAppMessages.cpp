@@ -45,6 +45,9 @@ void compactHistory(vector<Message> &chat)
 
     while (j < chat.size())
     {
+        chat[j].deleted = true;
+        chat[j].text = "[NULL]";
+        j++;
     }
 }
 
